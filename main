@@ -30,9 +30,7 @@ int main(int argc, char**argv)
 		jz my_end
 		sub cl, '0'
 		imul eax, 10
-		xor edx, edx
-		mov dl, cl
-		add eax, edx
+		add eax, ecx
 		inc ebx
 		jmp my_loop
 
@@ -45,6 +43,6 @@ int main(int argc, char**argv)
 		pop eax
 	};
 	
-	cout << "Covnerted number : " << CalcNumber << endl;
+	cout << "Converted number : " << CalcNumber << endl;
 	return 0;
 }
